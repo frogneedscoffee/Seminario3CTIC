@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Seminario : MonoBehaviour
+{
+    Rigidbody2D RB2D;
+    SpriteRenderer SR;
+    public float speed;
+    Vector3 direction;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        RB2D = GetComponent<Rigidbody2D>();
+        SR = GetComponent<SpriteRenderer>();
+        direction = new Vector3(0, -3.92f, 0);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Debug.Log(Input.GetKey(KeyCode.F));
+        float AXH = Input.GetAxis("Horizontal");
+        if (Input.GetKey(KeyCode.F))
+        {
+            transform.position += direction * speed * Time.deltaTime;
+        }
+        
+    }
+
+    private void FixedUpdate()
+    {
+        
+    }
+}
