@@ -1,0 +1,30 @@
+
+
+public static GameManagerA Me;
+static GameManagerA GM 
+{
+  get
+  {
+  return Me;
+  }
+}
+
+private void Awake () 
+{
+Me = this;
+}
+
+GameManagerA.GM.funcion a llamar 
+
+
+
+public void HitStop() {
+Time.timeScale = 0f;
+StartCoroutine(HitStopCoroutine(TimeStopped));
+}
+IEnumerator HitStopCoroutine(float TimeStopped)
+{
+  linea 1
+  yield return new WaitForSeconds(0f);
+  linea 2
+}
